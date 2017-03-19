@@ -1,41 +1,87 @@
 html, body, ul, ol {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Raleway', sans-serif; }
 
-nav {
-  font-size: 24px;
-  font-family: 'Sansita', sans-serif;
+.container-fluid {
+  padding: 0;
+  margin: 0; }
+
+.navbar {
+  border: none; }
+
+.transparent {
+  background-color: transparent; }
+
+#navigation ul {
+  margin-left: auto;
+  margin-right: auto; }
+#navigation a {
+  font-weight: 600;
+  color: black;
+  transition: all 0.5s ease-in-out 0s; }
+  #navigation a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s; }
+  #navigation a:hover {
+    color: white; }
+  #navigation a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top; }
+
+  .navbar .navbar-collapse {
+    text-align: center; } }
+header {
+  background: radial-gradient(rgba(245, 93, 85, 0.8), rgba(245, 93, 85, 0.9)), url("img/codeBG.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 95vh;
   text-align: center;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: fixed; }
-  nav ul {
-    list-style: none; }
-    nav ul li {
-      display: inline; }
-      nav ul li a {
-        position: relative;
-        text-decoration: none;
-        color: black; }
-      nav ul li a:hover {
-        color: black; }
-      nav ul li a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s; }
-      nav ul li a:hover:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1); }
+  position: relative;
+  top: 0; }
+  header div.container {
+    margin-top: 35vh; }
+  header h1 {
+    letter-spacing: 4px;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 5em;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      header h1 {
+        top: 35%; } }
+    @media (min-width: 1024px) {
+      header h1 {
+        top: 35%; } }
+  header p {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+  header span {
+    color: #ffffff;
+    font-size: 4em; }
 
 /*# sourceMappingURL=style.css.map */
