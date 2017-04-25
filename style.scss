@@ -1,5 +1,15 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$font:'Raleway', sans-serif;
+
+@mixin project-overlay-hover{
+  &:hover {
+    cursor: pointer;
+    .overlay {
+      opacity: 1;
+    }
+  }
+}
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
@@ -14,8 +24,7 @@ $desktop-width: 1024px;
 }
 
 @mixin retina {
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min--moz-device-pixel-ratio: 2),
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-device-pixel-ratio: 2),
@@ -34,7 +43,7 @@ $desktop-width: 1024px;
 html, body, ul, ol {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font;
 }
 
 .container-fluid {
@@ -46,19 +55,53 @@ html, body, ul, ol {
   border: none;
 }
 
+#nav-identity li a {
+  padding: 5px;
+}
+
 .transparent {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 540px) {
+  #identity-name {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet-width) {
+  #nav-identity {
+    margin: auto 10%;
+  }
+  .navbar-collapse.collapse {
+    display: block;
+  }
+
+  .navbar-nav > li, .navbar-nav {
+    float: left;
+  }
+
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+  }
+
+  .navbar-right {
+    float: right;
+  }
 }
 
 #navigation {
-  ul {
-    margin-left: auto;
-    margin-right: auto;
+  #nav-links li {
+    font-size: 16px;
   }
-  a {
+  #nav-links li:last-child {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  #nav-links a {
     font-weight: 600;
-    color: black;
-    transition: all 0.5s ease-in-out 0s;
+    color: white;
+    transition: all 0.2s ease-in-out 0s;
     &:before {
       content: "";
       position: absolute;
@@ -70,8 +113,8 @@ html, body, ul, ol {
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
-      -webkit-transition: all 0.5s ease-in-out 0s;
-      transition: all 0.5s ease-in-out 0s;
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
     }
     &:hover {
       color: white;
@@ -82,27 +125,25 @@ html, body, ul, ol {
       transform: scaleX(1);
     }
   }
-}
-
-@media (min-width: 768px) {
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-
-  .navbar .navbar-collapse {
-    text-align: center;
+  #nav-identity {
+    float: right;
+    a {
+      font-size: 18px;
+      color: white;
+    }
   }
 }
+
 header {
-  background: radial-gradient(rgba(245, 93, 85, .8), rgba(245, 93, 85, .9)), url("img/codeBG.jpg");
+  background: linear-gradient(rgba(0, 191, 255, .9), rgba(0, 191, 255, .2)), url(img/codeBG.jpg);
   background-position: center;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   text-align: center;
   position: relative;
-  top:0;
+  top: 0;
+  width: 100%;
+  margin-bottom: 75px;
   div.container {
     margin-top: 35vh;
   }
@@ -116,11 +157,11 @@ header {
     left: 0;
     right: 0;
     margin: 0 auto;
-    @include tablet{
+    @include tablet {
       top: 35%;
     }
-    @include desktop{
-      top:35%;
+    @include desktop {
+      top: 35%;
     }
   }
   p {
@@ -134,4 +175,62 @@ header {
     color: #ffffff;
     font-size: 4em;
   }
+}
+
+.projects {
+  div {
+    padding: 0;
+    height: 45vh;
+  }
+  a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    font-family: $font;
+  }
+}
+
+.overlay {
+  $time: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background: rgba(0, 191, 255, .8);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: opacity $time;
+  -moz-transition: opacity $time;
+  -ms-transition: opacity $time;
+  -o-transition: opacity $time;
+  transition: opacity $time;
+}
+
+#cms {
+  background: url(img/cms.svg) center center no-repeat;
+  background-size: cover;
+  @include project-overlay-hover;
+}
+
+#pw {
+  background: url(img/pw.svg) center center no-repeat;
+  background-size: cover;
+  @include project-overlay-hover;
+}
+
+#jsgame {
+  background: url(img/jsgame.svg) center center no-repeat;
+  background-size: cover;
+  @include project-overlay-hover;
+}
+
+#capp {
+  background: url(img/capap.svg) center center no-repeat;
+  background-size: cover;
+  @include project-overlay-hover;
+}
+
+.modal-dialog{
+  width: 80vw;
 }
