@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' href='img/icon.png'>
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+<a href="Laurentiu-Calin-Durnea-CV.pdf" download class="btn btn-info" id="download-resume-link" >
+    <i class="fa fa-download fa-2x" id="download-resume-icon" aria-hidden="true"></i> <span>Download PDF</span>
+</a>
+
+<!-- Navigation -->
+<nav id="navigation" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" id="nav-links">
+                <li onclick="Contact()"><a href="contact.php">CONTACT</a></li>
+                <li onclick="Resume()"><a href="resume.html">RESUME</a></li>
+                <li onclick="Work()"><a href="index.php">WORK</a></li>
+            </ul>
+            <ul class="nav navbar-nav" id="nav-identity">
+                <li><a href="index.php"><img src="img/w-icon.png" alt=""><span
+                        id="identity-name"> laurentiu<b>durnea</b></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="page-content">
+    <div class="col-md-8 col-md-offset-2">
+        <img id="resume-display-pdf" src="img/resume.svg" alt="resume display">
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Copyright &copy; Laurentiu Durnea 2017</p>
+        </div>
+    </div>
+    <!-- /.row -->
+</footer>
+
+
+</body>
+</html>

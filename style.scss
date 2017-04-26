@@ -1,8 +1,9 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
-$font:'Raleway', sans-serif;
+$font: 'Raleway', sans-serif;
+$main-color: rgb(0, 191, 255);
 
-@mixin project-overlay-hover{
+@mixin project-overlay-hover {
   &:hover {
     cursor: pointer;
     .overlay {
@@ -57,6 +58,7 @@ html, body, ul, ol {
 
 #nav-identity li a {
   padding: 5px;
+  padding-top: 7px;
 }
 
 .transparent {
@@ -182,7 +184,7 @@ header {
     padding: 0;
     height: 45vh;
   }
-  a{
+  a {
     text-align: center;
     text-decoration: none;
     color: white;
@@ -231,6 +233,128 @@ header {
   @include project-overlay-hover;
 }
 
-.modal-dialog{
-  width: 80vw;
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-dialog {
+  width: 90vw;
+  @include tablet {
+    width: 90vw;
+  }
+  @include desktop {
+    width: 70vw;
+  }
+}
+
+.modal-backdrop.in {
+  opacity: .9;
+}
+
+.modal-header {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: $main-color;
+  }
+  span {
+    margin: 0 5px;
+  }
+}
+
+.center-images-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+
+}
+
+.modal-body {
+  p {
+    font-family: Arial;
+    font-size: 16px;
+    margin: 25px auto;
+  }
+  a {
+    font-size: 18px;
+  }
+  img {
+    border: 1px solid black;
+    padding: 0;
+  }
+}
+
+#webshopModal {
+  .modal-header, .modal-footer {
+    color: white;
+    background: #2ecc71;
+  }
+}
+
+#portfolioModal {
+  .modal-header, .modal-footer {
+    color: white;
+    background: #34495e;
+  }
+}
+
+#gameModal {
+  .modal-header, .modal-footer {
+    color: white;
+    background: #f39c12;
+  }
+  .modal-body {
+    img:nth-child(0) {
+      max-width: 500px;
+      float: left;
+    }
+    img:nth-child(1) {
+      max-width: 500px;
+      float: right;
+    }
+  }
+}
+
+#webappModal {
+  .modal-header, .modal-footer {
+    color: white;
+    background: #9b59b6;
+  }
+}
+
+.navbar-inverse {
+  background-color: $main-color;
+}
+
+#resume-display-pdf {
+  margin-top: 75px;
+}
+
+#download-resume-link {
+  $time1: 0.7s;
+  $ident: all;
+  position: fixed;
+  top: 150px;
+  right: -140px;
+  -webkit-transition: $ident $time1;
+  -moz-transition: $ident $time1;
+  -ms-transition: $ident $time1;
+  -o-transition: $ident $time1;
+  transition: $ident $time1;
+  &:hover {
+    right: -5px;
+  }
+  span {
+    font-size: 18px;
+  }
+}
+
+.btn-info {
+  background-color: $main-color;
+}
+
+#download-resume-icon {
+  margin-right: 10px;
 }

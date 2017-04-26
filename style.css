@@ -11,7 +11,8 @@ html, body, ul, ol {
   border: none; }
 
 #nav-identity li a {
-  padding: 5px; }
+  padding: 5px;
+  padding-top: 7px; }
 
 .transparent {
   background-color: transparent; }
@@ -162,7 +163,90 @@ header {
     #capp:hover .overlay {
       opacity: 1; }
 
+.modal-content {
+  border-radius: 0; }
+
 .modal-dialog {
-  width: 80vw; }
+  width: 90vw; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .modal-dialog {
+      width: 90vw; } }
+  @media (min-width: 1024px) {
+    .modal-dialog {
+      width: 70vw; } }
+
+.modal-backdrop.in {
+  opacity: .9; }
+
+.modal-header a {
+  text-decoration: none;
+  color: black; }
+.modal-header a:hover {
+  color: deepskyblue; }
+.modal-header span {
+  margin: 0 5px; }
+
+.center-images-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 0; }
+
+.modal-body p {
+  font-family: Arial;
+  font-size: 16px;
+  margin: 25px auto; }
+.modal-body a {
+  font-size: 18px; }
+.modal-body img {
+  border: 1px solid black;
+  padding: 0; }
+
+#webshopModal .modal-header, #webshopModal .modal-footer {
+  color: white;
+  background: #2ecc71; }
+
+#portfolioModal .modal-header, #portfolioModal .modal-footer {
+  color: white;
+  background: #34495e; }
+
+#gameModal .modal-header, #gameModal .modal-footer {
+  color: white;
+  background: #f39c12; }
+#gameModal .modal-body img:nth-child(0) {
+  max-width: 500px;
+  float: left; }
+#gameModal .modal-body img:nth-child(1) {
+  max-width: 500px;
+  float: right; }
+
+#webappModal .modal-header, #webappModal .modal-footer {
+  color: white;
+  background: #9b59b6; }
+
+.navbar-inverse {
+  background-color: deepskyblue; }
+
+#resume-display-pdf {
+  margin-top: 75px; }
+
+#download-resume-link {
+  position: fixed;
+  top: 150px;
+  right: -140px;
+  -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  -ms-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s; }
+  #download-resume-link:hover {
+    right: -5px; }
+  #download-resume-link span {
+    font-size: 18px; }
+
+.btn-info {
+  background-color: deepskyblue; }
+
+#download-resume-icon {
+  margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */
