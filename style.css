@@ -249,4 +249,19 @@ header {
 #download-resume-icon {
   margin-right: 10px; }
 
+.red {
+  color: red; }
+
+.form-area {
+  padding: 15px 60px; }
+
+.alert {
+  padding: 10px; }
+
+#contact-container {
+  margin-top: 75px; }
+  #contact-container h3 {
+    margin: 5px 0 35px 0;
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
