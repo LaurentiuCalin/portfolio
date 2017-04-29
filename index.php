@@ -234,25 +234,21 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">webapp</h4>
+                <h4 class="modal-title">Staff management app</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="img/pw1.PNG" alt="" class="img-responsive">
-                        <p>
-                            I have created this website in order to gather the projects that I had worked on until that
-                            point and also to illustrate the skills and abilities that I have.
-                        </p>
-                        <p>
-                            It is created in an organized manner in order to be changed and modified efficiently if
-                            necessary. It was created using HTML and CSS and a bit of JS.
-                        </p>
-                        <img src="img/pw2.PNG" alt="" class="img-responsive">
+                        <p>Web application created with C# in Microsoft Visual Studio. It allows the administrator to create a profile for the company and add skills according to his employees.</p>
+                        <p>These skills can be later chosen but the employees, after they create their own accounts, in order for the company to keep track of what it's employees are specialized on or what improvements they can get. </p>
+                        <p>The employees can see each others profiles in order to ask for assistance or information regarding a specific skill. There is also a chat option that can facilitate the communication throughout the platform.</p>
+                        <div class="row center-images-row">
+                            <img src="img/cmp2.PNG" alt="" class="col-md-5 img-responsive">
+                            <img src="img/cmp3.PNG" alt="" class="col-md-5 img-responsive">
+                        </div>
                         <div class="row col-md-12">
                             <center>
-                                <p>If you want to see the code or the website, they are available on the following
-                                    links:<br>
+                                <p>If you want to see the code it is available on:<br>
                                     <a href="https://github.com/LaurentiuCalin/companyOrganisationC.git"
                                        target="_blank">
                                         <i class="fa fa-github"> </i> Github</a>

@@ -70,7 +70,7 @@ html, body, ul, ol {
     color: white; }
 
 header {
-  background: linear-gradient(rgba(0, 191, 255, 0.9), rgba(0, 191, 255, 0.2)), url(img/codeBG.jpg);
+  background: linear-gradient(rgba(0, 191, 255, 0.9), rgba(0, 191, 255, 0.2)), url(img/Optimized-codeBG.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -190,6 +190,8 @@ header {
   display: flex;
   justify-content: space-around;
   padding: 0; }
+  .center-images-row .img-responsive {
+    max-height: 250px; }
 
 .modal-body p {
   font-family: Arial;
@@ -226,10 +228,12 @@ header {
 .navbar-inverse {
   background-color: deepskyblue; }
 
-#resume-display-pdf {
+#resume-display {
+  z-index: 1;
   margin-top: 75px; }
 
 #download-resume-link {
+  z-index: 99;
   position: fixed;
   top: 150px;
   right: -140px;

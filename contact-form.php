@@ -13,7 +13,7 @@ if (isset($_POST['name']) && !empty($_POST['name'])) {
         $email = $_POST['email'];
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             if (isset($_POST['subject']) && !empty($_POST['subject'])) {
-                $subject = $_POST['subject'];
+                $subject_form = $_POST['subject'];
                 if (isset($_POST['message']) && !empty($_POST['message'])) {
                     $message = $_POST['message'];
                     if (isset($_POST['mobile']) && !empty($_POST['mobile'])) {
@@ -42,7 +42,7 @@ if (isset($_POST['name']) && !empty($_POST['name'])) {
 <tr>
 <td>$name</td>
 <td>$email</td>
-<td>$subject</td>
+<td>$subject_form</td>
 <td>$mobile</td>
 <td>$message</td>
 </tr>

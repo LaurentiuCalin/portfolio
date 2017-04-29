@@ -49,7 +49,7 @@ session_start();
     <div class="col-md-6 col-md-offset-3" id="contact-container">
         <div class="form-area">
             <form role="form" action="contact-form.php" method="post">
-                <h3>Contact me!</h3>
+                <h3>Contact me using the following form or on <a href="https://github.com/LaurentiuCalin" target="_blank">Github</a> | <a href="https://linkedin.com/in/laurentiudurnea" target="_blank">LinkedIn</a> | <a href="mailto:durnea.calin@gmail.com" target="_blank">Email</a></h3>
                 <h5>Fields marked with * are required</h5>
                 <?php
 

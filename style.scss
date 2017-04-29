@@ -137,7 +137,7 @@ html, body, ul, ol {
 }
 
 header {
-  background: linear-gradient(rgba(0, 191, 255, .9), rgba(0, 191, 255, .2)), url(img/codeBG.jpg);
+  background: linear-gradient(rgba(0, 191, 255, .9), rgba(0, 191, 255, .2)), url(img/Optimized-codeBG.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -268,7 +268,9 @@ header {
   display: flex;
   justify-content: space-around;
   padding: 0;
-
+  .img-responsive{
+    max-height: 250px;
+  }
 }
 
 .modal-body {
@@ -328,11 +330,13 @@ header {
   background-color: $main-color;
 }
 
-#resume-display-pdf {
+#resume-display {
+  z-index: 1;
   margin-top: 75px;
 }
 
 #download-resume-link {
+  z-index: 99;
   $time1: 0.7s;
   $ident: all;
   position: fixed;
